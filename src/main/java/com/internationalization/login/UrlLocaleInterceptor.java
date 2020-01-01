@@ -38,7 +38,6 @@ public class UrlLocaleInterceptor extends HandlerInterceptorAdapter {
         }
         // Getting Locale from UrlLocaleResolver (from WebMvcConfig)
         Locale locale = localeResolver.resolveLocale(request);
-        System.out.println("Printing LOCALE from the request: " + locale);
         localeResolver.setLocale(request, response, locale);
 
         return true;
